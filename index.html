@@ -1165,15 +1165,17 @@
   }
 
   .tcard-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    max-width: 520px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 860px;
     margin: 0 auto;
     padding: 0 24px 48px;
   }
 
   .tcard {
+    width: calc(33.33% - 8px);
     border-radius: 12px;
     overflow: hidden;
     background: #2a2a2a;
