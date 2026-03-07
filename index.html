@@ -1128,29 +1128,20 @@
   .kakao-section .section-title { color: white; padding: 0 24px; }
   .kakao-section .section-sub { color: rgba(255,255,255,0.5); padding: 0 24px; }
 
-  .kakao-slider-wrapper {
-    margin-top: 40px;
-    overflow: hidden;
+  .kakao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    max-width: 520px;
+    margin: 32px auto 0;
+    padding: 0 24px;
+  }
+
+  .review-grid-img {
     width: 100%;
-  }
-
-  .kakao-slider-track {
-    display: flex;
-    gap: 12px;
-    padding: 8px 0;
-    animation: slideLoop 40s linear infinite;
-    width: max-content;
-  }
-
-  .kakao-slider-track:hover { animation-play-state: paused; }
-
-  .review-slide-img {
-    height: 320px;
-    width: auto;
-    border-radius: 14px;
-    flex-shrink: 0;
     display: block;
-    object-fit: contain;
+    border-radius: 14px;
+    object-fit: cover;
     background: #2a2a2a;
   }
 
@@ -1669,51 +1660,31 @@
   <h2 class="section-title">합격 소식,<br>직접 들어보세요</h2>
   <p class="section-sub">학생들이 직접 보내온 진짜 이야기입니다</p>
 
-  <div class="kakao-slider-wrapper">
-    <div class="kakao-slider-track">
-      <img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 호세이 합격">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 2023">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 국제">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 23학번">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 호세이 2">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 합격 캡쳐">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 도시샤 합격">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 합격 소식">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 합격2">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 면접 감사">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 리츠메이칸">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 지도 감사">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 오사카가쿠인">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 긴키대">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 토요대">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="수기편지">
-
-      <img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 호세이 합격">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 2023">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 국제">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 23학번">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 호세이 2">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 합격 캡쳐">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 도시샤 합격">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 합격 소식">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 메이지 합격2">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 면접 감사">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 리츠메이칸">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 지도 감사">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 오사카가쿠인">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 긴키대">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="카톡 - 토요대">
-<img class="review-slide-img" src="[IMAGE_REMOVED]" alt="수기편지">
-
-    </div>
+  <div class="kakao-grid">
+    <img class="review-grid-img" src="./kakaoreview15.png" alt="카톡 - 호세이 합격">
+    <img class="review-grid-img" src="./kakaoreview13.png" alt="카톡 - 메이지 2023">
+    <img class="review-grid-img" src="./kakaoreview12.png" alt="카톡 - 메이지 국제">
+    <img class="review-grid-img" src="./kakaoreview11.png" alt="카톡 - 23학번">
+    <img class="review-grid-img" src="./kakaoreview14.png" alt="카톡 - 호세이 2">
+    <img class="review-grid-img" src="./kakaoreview10.jpg" alt="카톡 - 메이지 합격 캡쳐">
+    <img class="review-grid-img" src="./kakaoreview9.jpg" alt="카톡 - 도시샤 합격">
+    <img class="review-grid-img" src="./kakaoreview8.jpg" alt="카톡 - 합격 소식">
+    <img class="review-grid-img" src="./kakaoreview7.jpg" alt="카톡 - 메이지 합격2">
+    <img class="review-grid-img" src="./kakaoreview6.jpg" alt="카톡 - 면접 감사">
+    <img class="review-grid-img" src="./kakaoreview5.jpg" alt="카톡 - 리츠메이칸">
+    <img class="review-grid-img" src="./kakaoreview4.jpg" alt="카톡 - 지도 감사">
+    <img class="review-grid-img" src="./kakaoreview3.jpg" alt="카톡 - 오사카가쿠인">
+    <img class="review-grid-img" src="./kakaoreview2.jpg" alt="카톡 - 긴키대">
+    <img class="review-grid-img" src="./kakaoreview.jpg" alt="카톡 - 토요대">
+    <img class="review-grid-img" src="./handreview.jpg" alt="수기편지">
   </div>
 
   <div class="tcard-section-title">수강생 리뷰</div>
   <div class="tcard-grid">
-    <div class="tcard"><img src="[IMAGE_REMOVED]" alt="별점 리뷰 - EJU 만점"></div>
-<div class="tcard"><img src="[IMAGE_REMOVED]" alt="별점 리뷰 - 송"></div>
-<div class="tcard"><img src="[IMAGE_REMOVED]" alt="별점 리뷰 - 정"></div>
-<div class="tcard"><img src="[IMAGE_REMOVED]" alt="별점 리뷰 - 김 2군데"></div>
+    <div class="tcard"><img src="./review4.png" alt="별점 리뷰 - EJU 만점"></div>
+<div class="tcard"><img src="./review3.png" alt="별점 리뷰 - 송"></div>
+<div class="tcard"><img src="./review2.png" alt="별점 리뷰 - 정"></div>
+<div class="tcard"><img src="./review.png" alt="별점 리뷰 - 김 2군데"></div>
 
   </div>
 </section>
