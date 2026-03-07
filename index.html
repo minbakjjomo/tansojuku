@@ -1544,6 +1544,162 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  @media (max-width: 640px) {
+    /* 비교표 */
+    .compare-split-header .col-label,
+    .compare-split-row .col-label { display: none; }
+    .compare-split-header { grid-template-columns: 1fr 1fr; }
+    .compare-split-row { grid-template-columns: 1fr 1fr; }
+    .compare-split-row .col-bad::before,
+    .compare-split-row .col-good::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #999;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .compare-split-row .col-good::before { color: var(--green-dark); opacity: 0.6; }
+    .compare-cell-desc { font-size: 10px; }
+
+    /* 히어로 */
+    .hero { padding: 90px 20px 50px; }
+    .hero-stats { gap: 20px; margin-top: 40px; }
+    .hero-stat-num { font-size: 26px; }
+
+    /* 섹션 공통 */
+    section { padding: 60px 20px; }
+
+    /* 고민 그리드 */
+    .pain-grid { grid-template-columns: 1fr 1fr; max-width: 100%; }
+
+    /* 합격대학 그리드 */
+    .uni-grid { grid-template-columns: 1fr 1fr; }
+
+    /* 로드맵 — 뱀 그리드 */
+    .roadmap {
+      display: grid !important;
+      grid-template-columns: 1fr auto 1fr !important;
+      grid-template-rows: auto auto auto auto auto !important;
+      max-width: 100% !important;
+      gap: 4px !important;
+      margin: 32px auto 48px !important;
+      flex-direction: unset !important;
+      align-items: center;
+    }
+    .roadmap > *:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .roadmap > *:nth-child(2) { grid-column: 2; grid-row: 1; transform: none; padding: 0 4px; }
+    .roadmap > *:nth-child(3) { grid-column: 3; grid-row: 1; }
+    .roadmap > *:nth-child(4) { grid-column: 3; grid-row: 2; transform: rotate(90deg); padding: 0; text-align: center; }
+    .roadmap > *:nth-child(5) { grid-column: 3; grid-row: 3; }
+    .roadmap > *:nth-child(6) { grid-column: 2; grid-row: 3; transform: rotate(180deg); padding: 0 4px; }
+    .roadmap > *:nth-child(7) { grid-column: 1; grid-row: 3; }
+    .roadmap > *:nth-child(8) { grid-column: 1; grid-row: 4; transform: rotate(90deg); padding: 0; text-align: center; }
+    .roadmap > *:nth-child(9) { grid-column: 1; grid-row: 5; }
+    .roadmap-step { padding: 10px 8px; min-width: 0; }
+    .roadmap-title { font-size: 14px; }
+    .roadmap-desc { font-size: 11px; }
+    .roadmap-badge { font-size: 9px; }
+
+    /* 커리큘럼 타임라인 */
+    .curriculum-timeline { max-width: 100%; }
+    .curriculum-timeline::before { display: none; }
+
+    .ct-row {
+      grid-template-columns: 36px 1fr 1fr !important;
+      gap: 8px !important;
+      margin-bottom: 20px;
+      align-items: center !important;
+    }
+
+    .ct-num {
+      grid-column: 1 !important;
+      grid-row: 1;
+      justify-self: center;
+    }
+
+    /* card-left: ct-left=카드(col2), ct-right=노트(col3) */
+    .ct-row.card-left .ct-left {
+      display: flex !important;
+      justify-content: flex-start;
+      grid-column: 2 !important;
+      grid-row: 1;
+    }
+    .ct-row.card-left .ct-right {
+      display: block !important;
+      grid-column: 3 !important;
+      grid-row: 1;
+      text-align: left;
+    }
+    .ct-row.card-left .ct-right .ct-note { text-align: left; }
+
+    /* card-right: ct-right=카드(col2), ct-left=노트(col3) */
+    .ct-row.card-right .ct-right {
+      display: flex !important;
+      justify-content: flex-start;
+      grid-column: 2 !important;
+      grid-row: 1;
+    }
+    .ct-row.card-right .ct-left {
+      display: block !important;
+      grid-column: 3 !important;
+      grid-row: 1;
+      text-align: left;
+    }
+    .ct-row.card-right .ct-left .ct-note { text-align: left; }
+
+    .ct-left .ct-card, .ct-right .ct-card {
+      width: 100% !important;
+      text-align: center;
+      padding: 10px 12px;
+    }
+    .ct-left .ct-card-tag, .ct-left .ct-card-title,
+    .ct-right .ct-card-tag, .ct-right .ct-card-title { text-align: center; }
+    .ct-card-title { font-size: 12px !important; }
+    .ct-note { max-width: 100%; font-size: 10px; }
+
+    /* 코스 그리드 */
+    .courses-grid { grid-template-columns: 1fr 1fr !important; }
+    .course-card.course-dark,
+    .course-card.course-green { grid-column: auto !important; }
+
+    /* 선생님 배너 */
+    .teacher-banner {
+      flex-direction: column !important;
+      gap: 16px !important;
+      align-items: flex-start !important;
+    }
+    .teacher-banner-item { width: 100%; }
+    .teacher-banner-divider { width: 100%; height: 1px; margin: 0; }
+
+    /* 선생님 그리드 */
+    .teachers-grid { grid-template-columns: 1fr 1fr; }
+    .teacher-card.teacher-main {
+      grid-column: span 2;
+      flex-direction: column;
+    }
+    .teacher-main .t-photo-wrap { width: 100%; aspect-ratio: 3/2; }
+
+    /* 학원 사진 그리드 */
+    .space-grid { grid-template-columns: 1fr 1fr; }
+    .space-img-wrap.landscape { grid-column: span 2; aspect-ratio: 16/9; }
+    .space-img-wrap.portrait,
+    .space-img-wrap.portrait-left { aspect-ratio: 3/4; }
+    .space-img-wrap.landscape-right { aspect-ratio: 4/3; }
+
+    /* 슬라이더 */
+    .slide-img { width: 180px; height: 101px; }
+    .review-slide-img { height: 240px; }
+
+    /* tcard */
+    .tcard-grid { padding: 0 16px 32px; }
+    .tcard { width: calc(50% - 6px); }
+
+    /* CTA */
+    .cta-cards { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 
@@ -1629,10 +1785,10 @@
     <!-- 수업 방식 -->
     <div class="compare-split-row">
       <div class="col-label">수업 방식</div>
-      <div class="col-bad">
+      <div class="col-bad" data-label="수업 방식">
         <div class="compare-cell-value">단체 수업</div>
       </div>
-      <div class="col-good">
+      <div class="col-good" data-label="수업 방식">
         <div class="compare-cell-value">완전 1:1</div>
         <div class="compare-cell-desc">내 약점만 골라서 집중 공략해드려요</div>
       </div>
@@ -1641,10 +1797,10 @@
     <!-- 합격률 -->
     <div class="compare-split-row">
       <div class="col-label">합격률</div>
-      <div class="col-bad">
+      <div class="col-bad" data-label="합격률">
         <div class="compare-cell-value">공개 안함</div>
       </div>
-      <div class="col-good">
+      <div class="col-good" data-label="합격률">
         <div class="compare-cell-value">100%</div>
         <div class="compare-cell-desc">숫자로 증명된 입시 전문성이에요</div>
       </div>
@@ -1653,10 +1809,10 @@
     <!-- 커리큘럼 -->
     <div class="compare-split-row">
       <div class="col-label">커리큘럼</div>
-      <div class="col-bad">
+      <div class="col-bad" data-label="커리큘럼">
         <div class="compare-cell-value">공통 커리큘럼</div>
       </div>
-      <div class="col-good">
+      <div class="col-good" data-label="커리큘럼">
         <div class="compare-cell-value">완전 맞춤형</div>
         <div class="compare-cell-desc">내 출발점과 상황, 목표에 딱 맞는 플랜이에요</div>
       </div>
@@ -1665,10 +1821,10 @@
     <!-- 일정 유연성 -->
     <div class="compare-split-row">
       <div class="col-label">일정 유연성</div>
-      <div class="col-bad">
+      <div class="col-bad" data-label="일정 유연성">
         <div class="compare-cell-value">고정 시간표</div>
       </div>
-      <div class="col-good">
+      <div class="col-good" data-label="일정 유연성">
         <div class="compare-cell-value">학생 맞춤 조율</div>
         <div class="compare-cell-desc">학교·직장 병행도 문제없이 조율해드려요</div>
       </div>
@@ -1677,10 +1833,10 @@
     <!-- 멘탈 케어 -->
     <div class="compare-split-row">
       <div class="col-label">멘탈 케어</div>
-      <div class="col-bad">
+      <div class="col-bad" data-label="멘탈 케어">
         <div class="compare-cell-value">없음</div>
       </div>
-      <div class="col-good">
+      <div class="col-good" data-label="멘탈 케어">
         <div class="compare-cell-value">있음</div>
         <div class="compare-cell-desc">흔들릴 때 옆에서 함께 버텨드릴게요</div>
       </div>
@@ -1689,10 +1845,10 @@
     <!-- 합격 후 케어 -->
     <div class="compare-split-row">
       <div class="col-label">합격 후 케어</div>
-      <div class="col-bad">
+      <div class="col-bad" data-label="합격 후 케어">
         <div class="compare-cell-value">없음</div>
       </div>
-      <div class="col-good">
+      <div class="col-good" data-label="합격 후 케어">
         <div class="compare-cell-value">입학·비자 안내</div>
         <div class="compare-cell-desc">합격 이후도 혼자 헤매지 않도록 도와드려요</div>
       </div>
@@ -1946,7 +2102,7 @@
   </div>
   <div class="curriculum-timeline" id="curriculum-admission">
 
-    <div class="ct-row">
+    <div class="ct-row card-left">
       <div class="ct-left">
         <div class="ct-card">
           <div class="ct-card-tag">FOUNDATION</div>
@@ -1959,7 +2115,7 @@
       </div>
     </div>
 
-    <div class="ct-row">
+    <div class="ct-row card-right">
       <div class="ct-left">
         <span class="ct-note">단계별로 실력을 다지며<br>스스로 생각하는 힘을 키워나갑니다<br><span style="color:var(--green);font-weight:700;">N3 · N2 수준</span></span>
       </div>
@@ -1972,7 +2128,7 @@
       </div>
     </div>
 
-    <div class="ct-row">
+    <div class="ct-row card-left">
       <div class="ct-left">
         <div class="ct-card">
           <div class="ct-card-tag">EJU</div>
@@ -1985,7 +2141,7 @@
       </div>
     </div>
 
-    <div class="ct-row">
+    <div class="ct-row card-right">
       <div class="ct-left">
         <span class="ct-note">소논문·지유서 반복 첨삭과 모의면접<br>합격의 핵심 서류와 실전을 완성합니다</span>
       </div>
@@ -2005,7 +2161,7 @@
       <div style="height:1px;flex:1;background:var(--green);opacity:0.3;"></div>
     </div>
 
-    <div class="ct-row">
+    <div class="ct-row card-left">
       <div class="ct-left">
         <div class="ct-card">
           <div class="ct-card-tag">AFTER</div>
