@@ -262,62 +262,7 @@
     margin: 0 auto;
   }
 
-  /* MAIN TAB */
-  .main-tab-wrap {
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-    margin: 20px auto 32px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 50px;
-    padding: 4px;
-    width: fit-content;
-  }
 
-  .main-tab {
-    padding: 10px 22px;
-    border-radius: 50px;
-    border: none;
-    background: transparent;
-    font-size: 14px;
-    font-weight: 700;
-    color: rgba(255,255,255,0.6);
-    cursor: pointer;
-    transition: all 0.25s;
-    font-family: 'Noto Sans KR', sans-serif;
-  }
-
-  .main-tab.active {
-    background: white;
-    color: var(--charcoal);
-  }
-
-  /* TAB SWITCH */
-  .tab-switch {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin: 24px auto 28px;
-  }
-
-  .tab-btn {
-    padding: 10px 24px;
-    border-radius: 50px;
-    border: 1.5px solid #ddd;
-    background: white;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-sub);
-    cursor: pointer;
-    transition: all 0.2s;
-    font-family: 'Noto Sans KR', sans-serif;
-  }
-
-  .tab-btn.active {
-    background: var(--charcoal);
-    border-color: var(--charcoal);
-    color: white;
-  }
 
   /* PAIN POINTS */
   .pain-section {
@@ -528,117 +473,301 @@
 
   /* WHY */
   .why-section {
-    background: white;
+    background: #f5f5f5;
     padding: 80px 24px;
   }
+
+  .why-section .section-tag { color: var(--green-dark); }
+  .why-section .section-title { color: var(--charcoal); }
+  .why-section .section-sub { color: var(--text-sub); }
 
   .why-header {
     text-align: center;
     margin-bottom: 48px;
   }
 
-  .compare-table {
-    max-width: 500px;
+  .compare-split {
+    max-width: 620px;
     margin: 0 auto;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    border: 1px solid #e8e8e8;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   }
 
-  .compare-header {
+  .compare-split-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background: var(--charcoal);
-    padding: 16px;
-    gap: 8px;
+    grid-template-columns: 0.8fr 1.1fr 1.1fr;
+    background: transparent;
   }
 
-  .compare-header div {
+  .compare-split-header > div {
+    padding: 14px 16px;
     font-size: 13px;
-    font-weight: 700;
-    color: white;
+    font-weight: 800;
     text-align: center;
   }
 
-  .compare-header div:first-child {
-    color: rgba(255,255,255,0.5);
-    text-align: left;
+  .compare-split-header .col-label {
+    background: #ebebeb;
+    color: transparent;
+    border-right: 1px solid #ddd;
   }
 
-  .compare-header .highlight { color: var(--green); }
+  .compare-split-header .col-bad {
+    background: #e0e0e0;
+    color: #999;
+    border-right: 1px solid #ddd;
+  }
 
-  .compare-row {
+  .compare-split-header .col-good {
+    background: var(--green);
+    color: white;
+  }
+
+  .compare-split-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 14px 16px;
-    gap: 8px;
-    border-bottom: 1px solid #f0f0f0;
+    grid-template-columns: 0.8fr 1.1fr 1.1fr;
+    border-top: 1px solid #e4e4e4;
     align-items: center;
   }
 
-  .compare-row:last-child { border-bottom: none; }
-  .compare-row:nth-child(even) { background: #fafafa; }
-
-  .compare-row .label {
-    font-size: 13px;
-    color: var(--text-sub);
-    font-weight: 500;
+  .compare-split-row > div {
+    padding: 14px 16px;
+    text-align: center;
   }
 
-  .compare-row .bad {
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
-  }
-
-  .compare-row .good {
-    text-align: center;
+  .compare-split-row .col-label {
+    background: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 12px;
     font-weight: 700;
-    color: var(--green-dark);
+    color: #333;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    height: 100%;
   }
 
+  .compare-split-row .col-bad {
+    background: white;
+    border-right: 1px solid #eee;
+  }
+
+  .compare-split-row .col-good {
+    background: var(--green-light);
+  }
+
+  .compare-cell-value {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .col-bad .compare-cell-value { color: #bbb; }
+  .col-good .compare-cell-value { color: var(--green-dark); }
+
+  .compare-cell-desc {
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+
+  .col-bad .compare-cell-desc { color: #ccc; }
+  .col-good .compare-cell-desc { color: #444; }
+
   /* CURRICULUM */
+  .roadmap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 600px;
+    margin: 32px auto 48px;
+    flex-wrap: nowrap;
+  }
+
+  .roadmap-step {
+    background: white;
+    border-radius: 14px;
+    padding: 14px 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+    border: 2px solid #e8e8e8;
+    transition: transform 0.2s;
+  }
+
+  .roadmap-step.highlight {
+    background: var(--green);
+    border-color: var(--green);
+  }
+
+  .roadmap-step.highlight .roadmap-title { color: white; }
+  .roadmap-step.highlight .roadmap-desc { color: rgba(255,255,255,0.85); }
+  .roadmap-step.highlight .roadmap-badge { background: rgba(255,255,255,0.25); color: white; }
+
+  .roadmap-badge {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+  }
+
+  .roadmap-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+
+  .roadmap-desc {
+    font-size: 10px;
+    color: var(--text-sub);
+    line-height: 1.5;
+  }
+
+  .roadmap-arrow {
+    font-size: 16px;
+    color: var(--green);
+    flex-shrink: 0;
+    padding: 0 6px;
+    font-weight: 700;
+  }
   .curriculum-section {
     background: var(--green-light);
     padding: 80px 24px;
     text-align: center;
   }
 
-  .curriculum-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .curriculum-timeline {
     max-width: 500px;
     margin: 40px auto 0;
+    position: relative;
   }
 
-  .curriculum-card {
+  .curriculum-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--green);
+    opacity: 0.3;
+    transform: translateX(-50%);
+  }
+
+  .curriculum-timeline {
+    max-width: 760px;
+    margin: 40px auto 0;
+    position: relative;
+  }
+
+  .curriculum-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--green);
+    opacity: 0.3;
+    transform: translateX(-50%);
+  }
+
+  .ct-row {
+    display: grid;
+    grid-template-columns: 1fr 36px 1fr;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 12px;
+    position: relative;
+  }
+
+  .ct-left {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ct-right {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .ct-card {
     background: white;
     border-radius: 14px;
-    padding: 20px 16px;
-    text-align: left;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 14px 16px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    width: 180px;
   }
 
-  .curriculum-num {
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--green);
-    line-height: 1;
-    margin-bottom: 8px;
-    font-family: 'Noto Serif JP', serif;
+  .ct-left .ct-card {
+    text-align: center;
   }
 
-  .curriculum-title {
+  .ct-left .ct-card-tag,
+  .ct-left .ct-card-title {
+    text-align: center;
+  }
+
+  .ct-note {
+    font-size: 11px;
+    color: var(--text-sub);
+    line-height: 1.6;
+    font-style: italic;
+    max-width: 220px;
+  }
+
+  .ct-left .ct-note { text-align: right; }
+  .ct-right .ct-note { text-align: left; }
+
+  .ct-card-title {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--charcoal);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
-  .curriculum-desc {
+  .ct-card-desc {
     font-size: 12px;
+    color: var(--text-sub);
+    line-height: 1.6;
+  }
+
+  .ct-card-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .ct-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(91,187,138,0.4);
+    justify-self: center;
+  }
     color: var(--text-sub);
     line-height: 1.6;
   }
@@ -1436,11 +1565,8 @@
 <section class="hero">
   <div class="hero-badge">일본 명문대 입시 · 회화 · JLPT 전문</div>
 
-  <!-- 메인 탭 선택 -->
-  
-
   <!-- 입시 히어로 -->
-  <div id="hero-admission" style="display: block;">
+  <div id="hero-admission">
     <h1>입시를 넘어,<br><em>일본에서의 삶</em>을<br>함께 설계합니다</h1>
     <p>EJU부터 소논문, 지유서, 면접까지<br>합격에 필요한 모든 것을 1:1로 함께합니다</p>
     <div class="hero-buttons">
@@ -1465,7 +1591,7 @@
   <h2 class="section-title">이런 고민,<br>해본 적 있으신가요?</h2>
 
 
-  <div class="pain-grid" id="pain-admission" style="display: grid;">
+  <div class="pain-grid" id="pain-admission">
     <div class="pain-card"><div class="pain-icon">😔</div><div class="pain-text">열심히 공부하는데<br><strong>EJU 점수가 안 올라요</strong></div></div>
     <div class="pain-card"><div class="pain-icon">😰</div><div class="pain-text">대형학원 다녔는데<br><strong>내 상황에 맞는 관리가 없어요</strong></div></div>
     <div class="pain-card"><div class="pain-icon">🤯</div><div class="pain-text">소논문·지유서·면접<br><strong>뭐부터 어떻게 준비해야 할지 모르겠어요</strong></div></div>
@@ -1476,7 +1602,7 @@
 
   
 
-  <div class="pain-answer" id="pain-answer-admission" style="display: block;">
+  <div class="pain-answer" id="pain-answer-admission">
     <div class="pain-answer-inner">
       <div class="pain-answer-icon">✅</div>
       <div class="pain-answer-text"><strong>탄소쥬크는 그 고민에서 시작했습니다.</strong><br>점수부터 멘탈까지, 학생 한 명 한 명의 상황에 맞게 함께합니다.</div>
@@ -1489,19 +1615,90 @@
   <div class="why-header">
     <div class="section-tag">#KNOWHOW</div>
     <h2 class="section-title">왜 탄소쥬크인가요?</h2>
-    <p class="section-sub">다른 곳과 탄소쥬크의 차이는<br>숫자가 아니라 밀도에 있습니다</p>
+    <p class="section-sub">대형학원과 탄소쥬크의 차이는<br>숫자가 아니라 밀도에 있습니다</p>
   </div>
-  <div id="why-admission" style="display: block;">
-    <div class="compare-table">
-      <div class="compare-header"><div>항목</div><div>대형 학원</div><div class="highlight">탄소쥬크</div></div>
-      <div class="compare-row"><div class="label">수업 방식</div><div class="bad">단체 수업</div><div class="good">완전 1:1</div></div>
-      <div class="compare-row"><div class="label">합격률</div><div class="bad">공개 안함</div><div class="good">100%</div></div>
-      <div class="compare-row"><div class="label">소논문 지도</div><div class="bad">제한적</div><div class="good">전과정 지도</div></div>
-      <div class="compare-row"><div class="label">면접 준비</div><div class="bad">별도 비용</div><div class="good">통합 포함</div></div>
-      <div class="compare-row"><div class="label">지유서 첨삭</div><div class="bad">횟수 제한</div><div class="good">무제한</div></div>
+  <div class="compare-split">
+
+    <!-- 헤더 -->
+    <div class="compare-split-header">
+      <div class="col-label"></div>
+      <div class="col-bad">대형 학원</div>
+      <div class="col-good">탄소쥬크</div>
     </div>
+
+    <!-- 수업 방식 -->
+    <div class="compare-split-row">
+      <div class="col-label">수업 방식</div>
+      <div class="col-bad">
+        <div class="compare-cell-value">단체 수업</div>
+      </div>
+      <div class="col-good">
+        <div class="compare-cell-value">완전 1:1</div>
+        <div class="compare-cell-desc">내 약점만 골라서 집중 공략해드려요</div>
+      </div>
+    </div>
+
+    <!-- 합격률 -->
+    <div class="compare-split-row">
+      <div class="col-label">합격률</div>
+      <div class="col-bad">
+        <div class="compare-cell-value">공개 안함</div>
+      </div>
+      <div class="col-good">
+        <div class="compare-cell-value">100%</div>
+        <div class="compare-cell-desc">숫자로 증명된 입시 전문성이에요</div>
+      </div>
+    </div>
+
+    <!-- 커리큘럼 -->
+    <div class="compare-split-row">
+      <div class="col-label">커리큘럼</div>
+      <div class="col-bad">
+        <div class="compare-cell-value">공통 커리큘럼</div>
+      </div>
+      <div class="col-good">
+        <div class="compare-cell-value">완전 맞춤형</div>
+        <div class="compare-cell-desc">내 출발점과 상황, 목표에 딱 맞는 플랜이에요</div>
+      </div>
+    </div>
+
+    <!-- 일정 유연성 -->
+    <div class="compare-split-row">
+      <div class="col-label">일정 유연성</div>
+      <div class="col-bad">
+        <div class="compare-cell-value">고정 시간표</div>
+      </div>
+      <div class="col-good">
+        <div class="compare-cell-value">학생 맞춤 조율</div>
+        <div class="compare-cell-desc">학교·직장 병행도 문제없이 조율해드려요</div>
+      </div>
+    </div>
+
+    <!-- 멘탈 케어 -->
+    <div class="compare-split-row">
+      <div class="col-label">멘탈 케어</div>
+      <div class="col-bad">
+        <div class="compare-cell-value">없음</div>
+      </div>
+      <div class="col-good">
+        <div class="compare-cell-value">있음</div>
+        <div class="compare-cell-desc">흔들릴 때 옆에서 함께 버텨드릴게요</div>
+      </div>
+    </div>
+
+    <!-- 합격 후 케어 -->
+    <div class="compare-split-row">
+      <div class="col-label">합격 후 케어</div>
+      <div class="col-bad">
+        <div class="compare-cell-value">없음</div>
+      </div>
+      <div class="col-good">
+        <div class="compare-cell-value">입학·비자 안내</div>
+        <div class="compare-cell-desc">합격 이후도 혼자 헤매지 않도록 도와드려요</div>
+      </div>
+    </div>
+
   </div>
-  
 </section>
 
 <section class="uni-section">
@@ -1714,11 +1911,113 @@
   <div class="section-tag">#CURRICULUM</div>
   <h2 class="section-title">어떻게 진행되나요?</h2>
   <p class="section-sub">목표에 따라 단계별로<br>체계적으로 함께합니다</p>
-  <div class="curriculum-grid" id="curriculum-admission" style="display: grid;">
-    <div class="curriculum-card"><div class="curriculum-num">01</div><div class="curriculum-title">EJU 대비</div><div class="curriculum-desc">일본어·수학·이과·총합과목 전략적 학습</div></div>
-    <div class="curriculum-card"><div class="curriculum-num">02</div><div class="curriculum-title">소논문 작성</div><div class="curriculum-desc">전공별 맞춤 소논문 구조 설계 및 첨삭</div></div>
-    <div class="curriculum-card"><div class="curriculum-num">03</div><div class="curriculum-title">지유서 완성</div><div class="curriculum-desc">지원 동기부터 장래 계획까지 무제한 첨삭</div></div>
-    <div class="curriculum-card"><div class="curriculum-num">04</div><div class="curriculum-title">면접 특훈</div><div class="curriculum-desc">실전 모의면접 및 예상 질문 완벽 대비</div></div>
+
+  <!-- 로드맵 -->
+  <div class="roadmap">
+    <div class="roadmap-step">
+      <div class="roadmap-badge">STEP 1</div>
+      <div class="roadmap-title">기초</div>
+      <div class="roadmap-desc">일본어 기초<br>N5~N4</div>
+    </div>
+    <div class="roadmap-arrow">→</div>
+    <div class="roadmap-step">
+      <div class="roadmap-badge">STEP 2</div>
+      <div class="roadmap-title">초·중급</div>
+      <div class="roadmap-desc">JLPT 대비<br>EJU 입문</div>
+    </div>
+    <div class="roadmap-arrow">→</div>
+    <div class="roadmap-step">
+      <div class="roadmap-badge">STEP 3</div>
+      <div class="roadmap-title">EJU · 종합</div>
+      <div class="roadmap-desc">본고사 전략<br>종합과목</div>
+    </div>
+    <div class="roadmap-arrow">→</div>
+    <div class="roadmap-step">
+      <div class="roadmap-badge">STEP 4</div>
+      <div class="roadmap-title">서류 · 면접</div>
+      <div class="roadmap-desc">소논문·지유서<br>모의면접</div>
+    </div>
+    <div class="roadmap-arrow">→</div>
+    <div class="roadmap-step highlight">
+      <div class="roadmap-badge">GOAL</div>
+      <div class="roadmap-title">합격</div>
+      <div class="roadmap-desc">최종 합격<br>합격 후 케어</div>
+    </div>
+  </div>
+  <div class="curriculum-timeline" id="curriculum-admission">
+
+    <div class="ct-row">
+      <div class="ct-left">
+        <div class="ct-card">
+          <div class="ct-card-tag">FOUNDATION</div>
+          <div class="ct-card-title">기초 일본어</div>
+        </div>
+      </div>
+      <div class="ct-num">1</div>
+      <div class="ct-right">
+        <span class="ct-note">문법·어휘·회화 기초를 탄탄하게<br>처음부터 차근차근 시작합니다<br><span style="color:var(--green);font-weight:700;">N5 · N4 수준</span></span>
+      </div>
+    </div>
+
+    <div class="ct-row">
+      <div class="ct-left">
+        <span class="ct-note">단계별로 실력을 다지며<br>스스로 생각하는 힘을 키워나갑니다<br><span style="color:var(--green);font-weight:700;">N3 · N2 수준</span></span>
+      </div>
+      <div class="ct-num">2</div>
+      <div class="ct-right">
+        <div class="ct-card">
+          <div class="ct-card-tag">JLPT N3~N2</div>
+          <div class="ct-card-title">초중급 일본어</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ct-row">
+      <div class="ct-left">
+        <div class="ct-card">
+          <div class="ct-card-tag">EJU</div>
+          <div class="ct-card-title">EJU 본고사 대비</div>
+        </div>
+      </div>
+      <div class="ct-num">3</div>
+      <div class="ct-right">
+        <span class="ct-note">일본어(청독해·독해)·종합과목<br>원장이 직접 설계하는 고득점 전략</span>
+      </div>
+    </div>
+
+    <div class="ct-row">
+      <div class="ct-left">
+        <span class="ct-note">소논문·지유서 반복 첨삭과 모의면접<br>합격의 핵심 서류와 실전을 완성합니다</span>
+      </div>
+      <div class="ct-num">4</div>
+      <div class="ct-right">
+        <div class="ct-card" style="width:220px;">
+          <div class="ct-card-tag">DOCUMENTS & INTERVIEW</div>
+          <div class="ct-card-title">지유서 & 면접</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 최종합격 -->
+    <div style="display:flex;align-items:center;justify-content:center;margin:4px 0 24px;gap:10px;">
+      <div style="height:1px;flex:1;background:var(--green);opacity:0.3;"></div>
+      <div style="background:var(--green);color:white;font-size:12px;font-weight:800;padding:6px 18px;border-radius:20px;letter-spacing:1px;">🎉 최종 합격</div>
+      <div style="height:1px;flex:1;background:var(--green);opacity:0.3;"></div>
+    </div>
+
+    <div class="ct-row">
+      <div class="ct-left">
+        <div class="ct-card">
+          <div class="ct-card-tag">AFTER</div>
+          <div class="ct-card-title">합격 후 케어</div>
+        </div>
+      </div>
+      <div class="ct-num">5</div>
+      <div class="ct-right">
+        <span class="ct-note">입학 절차·비자 안내·리포트 작성법까지<br>일본 생활도 탄소쥬크와 함께합니다</span>
+      </div>
+    </div>
+
   </div>
   
 </section>
@@ -1858,43 +2157,6 @@
 <!-- FLOATING CTA -->
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSehx4fK0-VyjxuaKBbbx4NbJ7TKHI_B8vw2TmOo22XlgUo5nw/viewform" target="_blank" class="float-cta" title="무료 상담 신청">💬</a>
 
-<script>
-function switchMainTab(type) {
-  // 메인 탭 버튼 스타일
-  document.getElementById('main-tab-admission').classList.toggle('active', type === 'admission');
-  document.getElementById('main-tab-conversation').classList.toggle('active', type === 'conversation');
 
-  const isAdmission = type === 'admission';
-
-  // 히어로 콘텐츠
-  document.getElementById('hero-admission').style.display = isAdmission ? 'block' : 'none';
-  document.getElementById('hero-conversation').style.display = isAdmission ? 'none' : 'block';
-
-  // 통계 + 합격대학 (입시 전용)
-  document.getElementById('section-admission-only').style.display = isAdmission ? 'block' : 'none';
-
-  // 고민 섹션
-  document.getElementById('pain-admission').style.display = isAdmission ? 'grid' : 'none';
-  document.getElementById('pain-conversation').style.display = isAdmission ? 'none' : 'grid';
-  document.getElementById('pain-answer-admission').style.display = isAdmission ? 'block' : 'none';
-  document.getElementById('pain-answer-conversation').style.display = isAdmission ? 'none' : 'block';
-
-  // WHY 비교표
-  document.getElementById('why-admission').style.display = isAdmission ? 'block' : 'none';
-  document.getElementById('why-conversation').style.display = isAdmission ? 'none' : 'block';
-
-  // 커리큘럼
-  document.getElementById('curriculum-admission').style.display = isAdmission ? 'grid' : 'none';
-  document.getElementById('curriculum-conversation').style.display = isAdmission ? 'none' : 'grid';
-}
-
-// URL 파라미터로 탭 자동 선택 (인스타 광고용)
-window.addEventListener('DOMContentLoaded', function() {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('tab') === 'conversation') {
-    switchMainTab('conversation');
-  }
-});
-</script>
 
 </body>
