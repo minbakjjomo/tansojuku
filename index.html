@@ -1194,27 +1194,33 @@
   .space-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    max-width: 600px;
-    margin: 40px auto 0;
+    gap: 6px;
+    max-width: 480px;
+    margin: 32px auto 0;
   }
 
   .space-img {
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
     display: block;
   }
 
   /* 가로 사진 - 한 줄 전체 */
   .space-img.landscape {
     grid-column: span 2;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
   }
 
-  /* 세로 사진 - 두 개씩 */
+  /* 세로 사진 */
   .space-img.portrait {
     aspect-ratio: 3/4;
+  }
+
+  /* 세로+가로 혼합 행: 세로가 높이 결정, 가로가 채움 */
+  .space-img.portrait-left + .space-img.landscape-right {
+    aspect-ratio: unset;
+    height: 100%;
   }
 
   /* YOUTUBE SLIDER */
@@ -1722,11 +1728,11 @@
   <div class="space-grid">
     <img class="space-img landscape" src="./mainspace.jpg" alt="탄소쥬크 메인 공간">
     <img class="space-img portrait" src="./counselingspace.jpg" alt="상담룸">
-    <img class="space-img portrait" src="./classroom2.jpg" alt="수업실">
-    <img class="space-img landscape" src="./classroom1.jpg" alt="수업 공간">
     <img class="space-img portrait" src="./spacedetail.jpg" alt="공간 디테일">
-    <img class="space-img portrait" src="./light.jpg" alt="조명">
-    <img class="space-img landscape" src="./commonplace.jpg" alt="공용공간">
+    <img class="space-img landscape" src="./classroom1.jpg" alt="수업 공간">
+    <img class="space-img portrait-left" src="./light.jpg" alt="조명">
+    <img class="space-img landscape-right" src="./commonplace.jpg" alt="공용공간">
+    <img class="space-img landscape" src="./classroom2.jpg" alt="수업실">
   </div>
 </section>
 
