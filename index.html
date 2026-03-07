@@ -1120,29 +1120,33 @@
   /* KAKAO SLIDER */
   .kakao-section {
     background: #1a1a1a;
-    padding: 80px 0;
+    padding: 80px 0 0;
     text-align: center;
+    overflow: hidden;
   }
 
-  .kakao-section .section-tag { color: #FEE500; opacity: 0.8; padding: 0 24px; }
-  .kakao-section .section-title { color: white; padding: 0 24px; }
-  .kakao-section .section-sub { color: rgba(255,255,255,0.5); padding: 0 24px; }
+  .kakao-section .section-tag { color: #FEE500; opacity: 0.8; padding: 0 24px; text-align: center; width: 100%; }
+  .kakao-section .section-title { color: white; padding: 0 24px; text-align: center; width: 100%; }
+  .kakao-section .section-sub { color: rgba(255,255,255,0.5); padding: 0 24px; text-align: center; width: 100%; }
 
   .kakao-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
-    max-width: 520px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+    width: 100%;
+    max-width: 100%;
     margin: 32px auto 0;
-    padding: 0 24px;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   .review-grid-img {
     width: 100%;
     display: block;
-    border-radius: 14px;
+    aspect-ratio: 9/16;
     object-fit: cover;
     background: #2a2a2a;
+    border-radius: 8px;
   }
 
   .tcard-section-title {
