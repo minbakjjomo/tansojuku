@@ -1665,30 +1665,7 @@
     .course-card.course-dark,
     .course-card.course-green { grid-column: auto !important; }
 
-    /* 선생님 배너 */
-    .teacher-banner {
-      flex-direction: column !important;
-      gap: 0 !important;
-      align-items: center !important;
-      max-width: 280px;
-      margin: 20px auto 0;
-      padding: 16px;
-    }
-    .teacher-banner-item {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 12px 0;
-    }
-    .teacher-banner-icon { margin-bottom: 4px; }
-    .teacher-banner-text { text-align: center; }
-    .teacher-banner-text strong { font-size: 13px; }
-    .teacher-banner-divider {
-      width: 80%;
-      height: 1px;
-      margin: 0 auto;
-    }
+    /* 선생님 배너 — PC랑 동일하게 유지 */
 
     /* 선생님 그리드 */
     .teachers-grid { grid-template-columns: 1fr 1fr 1fr; }
@@ -1697,6 +1674,11 @@
       flex-direction: column;
     }
     .teacher-main .t-photo-wrap { width: 100%; aspect-ratio: 3/2; }
+    .t-name { font-size: 12px; gap: 3px; }
+    .t-title { font-size: 9px; padding: 2px 5px; }
+    .t-tag { font-size: 10px; }
+    .t-career-item { font-size: 10px; }
+    .t-info { padding: 10px; }
 
     /* 학원 사진 그리드 */
     .space-grid { grid-template-columns: 1fr 1fr; }
