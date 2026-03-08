@@ -1665,7 +1665,14 @@
     .course-card.course-dark,
     .course-card.course-green { grid-column: auto !important; }
 
-    /* 선생님 배너 — PC랑 동일하게 유지 */
+    /* 선생님 배너 — 3열 유지, 텍스트 줄바꿈 */
+    .teacher-banner { padding: 16px 12px; gap: 0; }
+    .teacher-banner-item { flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+    .teacher-banner-icon { font-size: 18px; }
+    .teacher-banner-text { text-align: center; }
+    .teacher-banner-text strong { font-size: 11px; display: block; word-break: keep-all; line-height: 1.4; }
+    .teacher-banner-text span, .teacher-banner-text br ~ * { font-size: 10px; }
+    .teacher-banner-divider { width: 1px; height: 40px; margin: 0 6px; }
 
     /* 선생님 그리드 */
     .teachers-grid { grid-template-columns: 1fr 1fr 1fr; }
@@ -2197,7 +2204,7 @@
   </div>
   <div class="t-info">
     <div class="t-name">김다은<span class="t-title">선생님</span></div>
-    <div class="t-tags"><div class="t-tag">🎓 한국외대 통번역대학원 석사</div></div>
+    <div class="t-tags"><div class="t-tag">🎓 한국외대 통번역<br>대학원</div></div>
     
   </div>
 </div>
@@ -2207,7 +2214,7 @@
   </div>
   <div class="t-info">
     <div class="t-name">송혜원<span class="t-title">선생님</span></div>
-    <div class="t-tags"><div class="t-tag">🎓 게이오대학교 학사</div></div>
+    <div class="t-tags"><div class="t-tag">🎓 게이오대학교</div></div>
     
   </div>
 </div>
@@ -2217,7 +2224,7 @@
   </div>
   <div class="t-info">
     <div class="t-name">정영헌<span class="t-title">선생님</span></div>
-    <div class="t-tags"><div class="t-tag">🎓 무사시노미술대학교 학사</div></div>
+    <div class="t-tags"><div class="t-tag">🎓 무사시노미술대학</div></div>
     
   </div>
 </div>
