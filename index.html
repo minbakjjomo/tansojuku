@@ -24,6 +24,7 @@
     color: var(--text);
     background: var(--white);
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* NAV */
@@ -286,6 +287,7 @@
     text-align: left;
     border-left: 3px solid #e0e0e0;
     transition: border-color 0.2s, transform 0.2s;
+    word-break: keep-all;
   }
 
   .pain-card:hover {
@@ -1300,6 +1302,7 @@
     padding: 8px 0;
     animation: slideLoop 40s linear infinite;
     width: max-content;
+    will-change: transform;
   }
 
   .kakao-slider-track:hover { animation-play-state: paused; }
@@ -1474,6 +1477,7 @@
     padding: 8px 0;
     animation: slideLoop 25s linear infinite;
     width: max-content;
+    will-change: transform;
   }
 
   .slider-track:hover { animation-play-state: paused; }
@@ -1545,6 +1549,12 @@
     to { opacity: 1; transform: translateY(0); }
   }
   @media (max-width: 640px) {
+    /* 텍스트 줄바꿈 - 모바일 전용 */
+    .pain-card { word-break: keep-all; overflow-wrap: break-word; }
+    .uni-kr { word-break: keep-all; overflow-wrap: break-word; font-size: 13px; }
+    .t-tag { word-break: keep-all; overflow-wrap: break-word; font-size: 10px; }
+    .compare-cell-desc { word-break: keep-all; overflow-wrap: break-word; }
+
     /* 비교표 */
     .compare-split-header .col-label,
     .compare-split-row .col-label { display: none; }
@@ -1754,7 +1764,7 @@
 
   <div class="pain-grid" id="pain-admission">
     <div class="pain-card"><div class="pain-icon">😔</div><div class="pain-text">열심히 공부하는데<br><strong>EJU 점수가 안 올라요</strong></div></div>
-    <div class="pain-card"><div class="pain-icon">😰</div><div class="pain-text">대형학원 다녔는데<br><strong>내 상황에 맞는 관리가 없어요</strong></div></div>
+    <div class="pain-card"><div class="pain-icon">😰</div><div class="pain-text">대형학원 다녔는데<br><strong>내 상황에 맞는 관리가&#8203;없어요</strong></div></div>
     <div class="pain-card"><div class="pain-icon">🤯</div><div class="pain-text">소논문·지유서·면접<br><strong>뭐부터 어떻게 준비해야 할지 모르겠어요</strong></div></div>
     <div class="pain-card"><div class="pain-icon">😟</div><div class="pain-text">일본 입시 정보가 너무 없어서<br><strong>혼자 준비하기 너무 막막해요</strong></div></div>
     <div class="pain-card"><div class="pain-icon">💸</div><div class="pain-text">어학원 다닐 시간·돈이 없는데<br><strong>일본어를 빨리 늘려야 해요</strong></div></div>
@@ -2011,7 +2021,7 @@
       <div class="course-icon">🎓</div>
       <div class="course-badge">입시 전문</div>
       <div class="course-title">일본 명문대<br>입시 코스</div>
-      <div class="course-desc">EJU부터 소논문, 지유서, 면접까지<br>합격에 필요한 전 과정을 1:1로</div>
+      <div class="course-desc">EJU부터 소논문, 지유서,<br>면접까지 합격에 필요한<br>전 과정을 1:1로</div>
       <div class="course-tags">
         <span>EJU</span><span>소논문</span><span>지유서</span><span>면접</span>
       </div>
@@ -2204,7 +2214,7 @@
   </div>
   <div class="t-info">
     <div class="t-name">김다은<span class="t-title">선생님</span></div>
-    <div class="t-tags"><div class="t-tag">🎓 한국외대 통번역<br>대학원</div></div>
+    <div class="t-tags"><div class="t-tag">🎓 한국외대 통번역대학원</div></div>
     
   </div>
 </div>
