@@ -5,9 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>탄소쥬크 | 일본 명문대 입시 전문학원</title>
   <meta name="description" content="와세다 출신 원장의 1:1 밀착 지도. 합격생 51명, 합격률 100%. EJU부터 원서·면접까지 처음부터 끝까지 책임집니다.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tansojuku.com/">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="탄소쥬크 | 일본 명문대 입시 전문학원">
-  <meta property="og:description" content="와세다 출신 원장의 1:1 밀착 지도. 합격생 51명, 합격률 100%.">
+  <meta property="og:description" content="와세다 출신 원장의 1:1 밀착 지도. 합격생 51명, 합격률 100%. EJU부터 원서·면접까지 처음부터 끝까지 책임집니다.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tansojuku.com/">
+  <meta property="og:image" content="https://tansojuku.com/logo_tansojuku.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="탄소쥬크">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="탄소쥬크 | 일본 명문대 입시 전문학원">
+  <meta name="twitter:description" content="와세다 출신 원장의 1:1 밀착 지도. 합격생 51명, 합격률 100%. EJU부터 원서·면접까지 처음부터 끝까지 책임집니다.">
+  <meta name="twitter:image" content="https://tansojuku.com/logo_tansojuku.jpg">
+
+  <!-- Security meta -->
+  <meta name="referrer" content="origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
   <link rel="icon" type="image/jpeg" href="./logo_tansojuku.jpg">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BBEBGEN2H"></script>
@@ -50,10 +71,11 @@
     .spring { transition: color 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
 
     .reveal {
-      opacity: 0; transform: translateY(2rem); filter: blur(4px);
-      transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1), filter 0.7s cubic-bezier(0.16,1,0.3,1);
+      opacity: 0; transform: translateY(1.5rem);
+      transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+      will-change: opacity, transform;
     }
-    .reveal.visible { opacity:1; transform:translateY(0); filter:blur(0); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
     .reveal-d1 { transition-delay:.1s } .reveal-d2 { transition-delay:.2s }
     .reveal-d3 { transition-delay:.3s } .reveal-d4 { transition-delay:.4s }
     .reveal-d5 { transition-delay:.5s }
@@ -65,7 +87,7 @@
 
     .nav-glass { background:rgba(255,255,255,0.07); backdrop-filter:blur(24px) saturate(180%); -webkit-backdrop-filter:blur(24px) saturate(180%); border:1px solid rgba(255,255,255,0.10); }
 
-    .gradient-text { background:linear-gradient(135deg,#5BBB8A 0%,#8BDBB0 50%,#5BBB8A 100%); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 4s linear infinite; }
+    .gradient-text { background:linear-gradient(135deg,#5BBB8A 0%,#8BDBB0 50%,#5BBB8A 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
     .eyebrow { font-size:0.68rem; font-weight:700; letter-spacing:0.22em; color:#5BBB8A; text-transform:uppercase; }
     .accent-line { width:40px; height:3px; background:linear-gradient(90deg,#5BBB8A,transparent); border-radius:2px; margin-bottom:1.25rem; }
@@ -138,6 +160,41 @@
     .roadmap-node-step { background:#0d1714 !important; }
     @media (max-width:767px) { .roadmap-line { left:27px; } }
   </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "탄소쥬크",
+    "alternateName": "Tansojuku",
+    "description": "와세다 출신 원장의 1:1 밀착 지도. EJU부터 원서·면접까지 처음부터 끝까지 책임지는 일본 명문대 입시 전문학원.",
+    "url": "https://tansojuku.com/",
+    "logo": "https://tansojuku.com/logo_tansojuku.jpg",
+    "image": "https://tansojuku.com/logo_tansojuku.jpg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://pf.kakao.com/_YYwAG/chat",
+      "availableLanguage": ["Korean"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "입시 강좌",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "EJU 입시반" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "일본어 회화반" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "JLPT 시험반" } }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "51"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -164,7 +221,7 @@
       <a href="#faq" class="px-4 py-1.5 rounded-full text-sm text-white/60 hover:text-white hover:bg-white/10 spring font-medium">FAQ</a>
     </div>
     <div class="flex items-center gap-2">
-      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="hidden sm:flex btn-primary text-sm py-2.5 px-5 min-h-[48px]">
+      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="hidden sm:flex btn-primary text-sm py-2.5 px-5 min-h-[48px]">
         무료 상담 <iconify-icon icon="solar:arrow-right-linear" width="15"></iconify-icon>
       </a>
       <button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-white/8 border border-white/10 spring hover:bg-white/14" aria-label="메뉴">
@@ -180,7 +237,7 @@
   <a href="#courses" class="menu-item text-3xl font-bold text-white hover:text-[#5BBB8A] spring" onclick="closeMenu()">강좌 안내</a>
   <a href="#reviews" class="menu-item text-3xl font-bold text-white hover:text-[#5BBB8A] spring" onclick="closeMenu()">후기</a>
   <a href="#interviews" class="menu-item text-3xl font-bold text-white hover:text-[#5BBB8A] spring" onclick="closeMenu()">합격 인터뷰</a>
-  <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="menu-item btn-primary mt-4" onclick="closeMenu()">
+  <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="menu-item btn-primary mt-4" onclick="closeMenu()">
     무료 상담 신청 <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
   </a>
 </div>
@@ -188,7 +245,7 @@
 <!-- ══ 01. HERO ══ -->
 <section id="hero" class="min-h-[100dvh] lg:min-h-0 relative overflow-hidden"
   style="background:radial-gradient(ellipse 70% 60% at 30% 50%,rgba(91,187,138,0.07) 0%,transparent 60%),radial-gradient(ellipse 50% 80% at 80% 20%,rgba(91,187,138,0.04) 0%,transparent 60%),#050505;">
-  <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full pointer-events-none" style="background:radial-gradient(circle,#5BBB8A,transparent 70%);filter:blur(100px);opacity:0.07;"></div>
+  <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(91,187,138,0.07) 0%,transparent 65%);"></div>
 
   <!-- ── 모바일 레이아웃 (< lg) ── -->
   <div class="lg:hidden flex flex-col min-h-[100dvh] pt-20">
@@ -227,7 +284,7 @@
         신사동 오프라인 · 소수정예 · 누적 합격생 51명.
       </p>
       <div class="reveal reveal-d4 grid grid-cols-2 gap-3 mt-auto">
-        <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="btn-primary text-sm">
+        <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm">
           무료 상담 신청하기 <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
         </a>
         <a href="#courses" class="btn-outline text-sm">강좌 안내 보기</a>
@@ -258,7 +315,7 @@
             신사동 오프라인 · 소수정예 · 누적 합격생 51명.
           </p>
           <div class="reveal reveal-d4 flex flex-row gap-3">
-            <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="btn-primary">
+            <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="btn-primary">
               무료 상담 신청하기 <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
             </a>
             <a href="#courses" class="btn-outline">강좌 안내 보기</a>
@@ -503,7 +560,7 @@
 
 <!-- ══ 05. CURRICULUM ══ -->
 <section id="curriculum" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background:#050505;">
-  <div class="absolute left-0 top-1/3 w-[500px] h-[500px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(91,187,138,0.15) 0%,transparent 70%);filter:blur(100px);opacity:0.07;"></div>
+  <div class="absolute left-0 top-1/3 w-[500px] h-[500px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(91,187,138,0.08) 0%,transparent 65%);"></div>
   <div class="max-w-4xl mx-auto relative z-10">
 
     <div class="reveal mb-14">
@@ -742,7 +799,7 @@
 
 <!-- ══ 07. REVIEWS ══ -->
 <section id="reviews" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(255,220,50,0.05) 0%,transparent 60%),#0f0c06;">
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] pointer-events-none" style="background:radial-gradient(ellipse,rgba(255,213,0,0.12) 0%,transparent 70%);filter:blur(60px);opacity:0.6;"></div>
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] pointer-events-none" style="background:radial-gradient(ellipse,rgba(255,213,0,0.07) 0%,transparent 65%);"></div>
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="reveal text-center mb-14">
       <div class="inline-block accent-line mx-auto"></div>
@@ -776,7 +833,7 @@
     <!-- Inline CTA after reviews -->
     <div class="reveal mt-14 mx-auto max-w-xl text-center">
       <p class="text-white/50 text-base mb-5">후기 속 합격생들처럼 — 지금 시작하실 수 있습니다.</p>
-      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="btn-primary">
+      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="btn-primary">
         무료 상담 신청하기 <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
       </a>
     </div>
@@ -787,7 +844,7 @@
 
 <!-- ══ 08. INTERVIEW ══ -->
 <section id="interviews" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background:#0a0a0a;">
-  <div class="absolute left-0 top-0 w-[600px] h-[600px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(91,187,138,0.12) 0%,transparent 70%);filter:blur(100px);opacity:0.5;transform:translate(-40%,-30%);"></div>
+  <div class="absolute left-0 top-0 w-[600px] h-[600px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(91,187,138,0.07) 0%,transparent 65%);transform:translate(-40%,-30%);"></div>
   <div class="max-w-7xl mx-auto relative z-10">
 
     <div class="reveal text-center mb-14">
@@ -800,7 +857,7 @@
     <!-- Featured row: Waseda (2 large cards) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
 
-      <a href="https://youtu.be/gA-FCeJlfuE?si=arMDu8xHfCNH-nfd" target="_blank" rel="noopener"
+      <a href="https://youtu.be/gA-FCeJlfuE?si=arMDu8xHfCNH-nfd" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d1 group relative block rounded-2xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.09);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -823,7 +880,7 @@
         </div>
       </a>
 
-      <a href="https://youtu.be/UuL0GWuSVmk?si=rE7pcbsRY-lpp7if" target="_blank" rel="noopener"
+      <a href="https://youtu.be/UuL0GWuSVmk?si=rE7pcbsRY-lpp7if" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d2 group relative block rounded-2xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.09);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -851,7 +908,7 @@
     <!-- Grid: Meiji (4 cards) -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
 
-      <a href="https://youtu.be/RoblUoJdQjA?si=kut6YvpgOwzuJT05" target="_blank" rel="noopener"
+      <a href="https://youtu.be/RoblUoJdQjA?si=kut6YvpgOwzuJT05" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d1 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -871,7 +928,7 @@
         </div>
       </a>
 
-      <a href="https://youtu.be/wh3c8p4PbMc?si=ofTUXE32ZFZ59N7r" target="_blank" rel="noopener"
+      <a href="https://youtu.be/wh3c8p4PbMc?si=ofTUXE32ZFZ59N7r" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d2 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -891,7 +948,7 @@
         </div>
       </a>
 
-      <a href="https://youtu.be/eOr9av-qEdU?si=H31djrsol-cBJhSh" target="_blank" rel="noopener"
+      <a href="https://youtu.be/eOr9av-qEdU?si=H31djrsol-cBJhSh" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d3 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -911,7 +968,7 @@
         </div>
       </a>
 
-      <a href="https://youtu.be/hjwbcmISvXI?si=jWu0n4ycf5mpsiUk" target="_blank" rel="noopener"
+      <a href="https://youtu.be/hjwbcmISvXI?si=jWu0n4ycf5mpsiUk" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d4 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -936,7 +993,7 @@
     <!-- Grid: Others (4 cards) -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
-      <a href="https://youtu.be/fojKZgk8g7A?si=dF2U5zROHvUZ--cu" target="_blank" rel="noopener"
+      <a href="https://youtu.be/fojKZgk8g7A?si=dF2U5zROHvUZ--cu" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d1 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -956,7 +1013,7 @@
         </div>
       </a>
 
-      <a href="https://youtu.be/j7LYNjv_fT4?si=eJRJ18FMIR1WsUM_" target="_blank" rel="noopener"
+      <a href="https://youtu.be/j7LYNjv_fT4?si=eJRJ18FMIR1WsUM_" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d2 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -976,7 +1033,7 @@
         </div>
       </a>
 
-      <a href="https://youtu.be/HK8oxhKd5Bw?si=ofI7tTnOPlOHk6NZ" target="_blank" rel="noopener"
+      <a href="https://youtu.be/HK8oxhKd5Bw?si=ofI7tTnOPlOHk6NZ" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d3 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -996,7 +1053,7 @@
         </div>
       </a>
 
-      <a href="https://youtu.be/J_H06N1gPS0?si=jckwiQkF944eDG7q" target="_blank" rel="noopener"
+      <a href="https://youtu.be/J_H06N1gPS0?si=jckwiQkF944eDG7q" target="_blank" rel="noopener noreferrer"
          class="reveal reveal-d4 group relative block rounded-xl overflow-hidden spring"
          style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
         <div class="relative overflow-hidden" style="aspect-ratio:16/9;">
@@ -1021,7 +1078,7 @@
     <!-- CTA -->
     <div class="reveal mt-14 text-center">
       <p class="text-white/40 text-sm mb-5">나도 합격생이 될 수 있습니다. 지금 상담을 시작해보세요.</p>
-      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="btn-primary">
+      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="btn-primary">
         무료 상담 신청하기 <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
       </a>
     </div>
@@ -1139,7 +1196,7 @@
     </div>
 
     <div class="reveal text-center">
-      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="btn-primary text-base">
+      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="btn-primary text-base">
         내게 맞는 강좌 상담받기 <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
       </a>
     </div>
@@ -1243,7 +1300,7 @@
 <!-- ══ 11. CTA ══ -->
 <section id="contact" class="py-28 md:py-40 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-center"
   style="background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(91,187,138,0.1) 0%,transparent 60%),#0a0a0a;">
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full pointer-events-none" style="background:radial-gradient(ellipse,rgba(91,187,138,0.12) 0%,transparent 70%);filter:blur(60px);"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full pointer-events-none" style="background:radial-gradient(ellipse,rgba(91,187,138,0.07) 0%,transparent 65%);"></div>
   <div class="max-w-4xl mx-auto relative z-10">
     <div class="reveal mb-6"><span class="eyebrow">지금 바로 시작하세요</span></div>
     <h2 class="reveal reveal-d1 text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mb-6" style="letter-spacing:-0.02em;">
@@ -1253,7 +1310,7 @@
       먼저 상담으로 시작하세요. 비용도, 부담도 없습니다.<br>원장이 직접 최적 플랜을 안내해 드립니다.
     </p>
     <div class="reveal reveal-d3 flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="btn-primary text-lg px-10 py-4">
+      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-10 py-4">
         <iconify-icon icon="solar:dialog-bold" width="20"></iconify-icon>
         카카오로 무료 상담 신청
         <iconify-icon icon="solar:arrow-right-linear" width="18"></iconify-icon>
@@ -1280,7 +1337,7 @@
       <p class="mt-1">© 2025 탄소쥬크. All rights reserved.</p>
     </div>
     <div class="flex items-center gap-3">
-      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener"
+      <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer"
          class="w-9 h-9 rounded-full flex items-center justify-center spring hover:bg-white/10"
          style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);">
         <iconify-icon icon="solar:dialog-bold" width="16" style="color:#5BBB8A;"></iconify-icon>
@@ -1291,7 +1348,7 @@
 
 <!-- Sticky CTA -->
 <div id="sticky-cta">
-  <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener" class="flex items-center gap-2.5 btn-primary shadow-2xl text-sm px-6 py-3">
+  <a href="https://pf.kakao.com/_YYwAG/chat" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 btn-primary shadow-2xl text-sm px-6 py-3">
     <iconify-icon icon="solar:dialog-bold" width="16"></iconify-icon>무료 상담 신청
     <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
   </a>
