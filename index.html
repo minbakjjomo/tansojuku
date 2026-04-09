@@ -43,11 +43,11 @@
     @keyframes shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
     @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
-    .animate-float { animation: float 7s ease-in-out infinite; }
-    .animate-float-alt { animation: floatAlt 9s ease-in-out infinite 1.5s; }
-    .animate-marquee { animation: marquee 32s linear infinite; }
+    .animate-float { animation: float 7s ease-in-out infinite; will-change: transform; }
+    .animate-float-alt { animation: floatAlt 9s ease-in-out infinite 1.5s; will-change: transform; }
+    .animate-marquee { animation: marquee 32s linear infinite; will-change: transform; }
 
-    .spring { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .spring { transition: color 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
 
     .reveal {
       opacity: 0; transform: translateY(2rem); filter: blur(4px);
@@ -106,7 +106,7 @@
     #lb-close { position:absolute; top:1.5rem; right:1.5rem; cursor:pointer; color:rgba(255,255,255,0.7); width:48px; height:48px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; transition:background 0.2s; }
     #lb-close:hover { background:rgba(255,255,255,0.2); color:#fff; }
 
-    .noise::after { content:''; position:fixed; inset:0; z-index:60; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); opacity:0.4; }
+    /* noise overlay removed - was causing full-page repaint on every frame */
 
     #scroll-bar { position:fixed; top:0; left:0; height:2px; background:linear-gradient(90deg,#5BBB8A,#3d9e6d); z-index:10000; width:0%; transition:width 0.1s linear; }
 
@@ -139,7 +139,7 @@
     @media (max-width:767px) { .roadmap-line { left:27px; } }
   </style>
 </head>
-<body class="noise">
+<body>
 
 <div id="scroll-bar"></div>
 
@@ -446,7 +446,7 @@
 
 <!-- ══ 04. DIFF ══ -->
 <section id="diff" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background:#0a0a0a;">
-  <div class="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full pointer-events-none animate-float-alt" style="background:radial-gradient(circle,rgba(91,187,138,0.18) 0%,transparent 70%);filter:blur(80px);opacity:0.08;"></div>
+  <div class="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full pointer-events-none animate-float-alt" style="background:radial-gradient(circle,rgba(91,187,138,0.12) 0%,transparent 70%);opacity:0.5;"></div>
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="reveal mb-16 max-w-2xl">
       <div class="accent-line"></div>
@@ -624,7 +624,7 @@
 
 <!-- ══ 06. TEACHER ══ -->
 <section id="teacher" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background:#0a0a0a;">
-  <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none animate-float" style="background:radial-gradient(circle,rgba(91,187,138,0.2) 0%,transparent 70%);filter:blur(80px);opacity:0.06;"></div>
+  <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none animate-float" style="background:radial-gradient(circle,rgba(91,187,138,0.14) 0%,transparent 70%);opacity:0.45;"></div>
   <div class="max-w-7xl mx-auto relative z-10">
 
     <div class="reveal mb-14 text-center">
@@ -1033,7 +1033,7 @@
 
 <!-- ══ 09. COURSES ══ (was 08) -->
 <section id="courses" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="background:#050505;">
-  <div class="absolute right-0 top-0 w-[500px] h-[500px] rounded-full pointer-events-none animate-float-alt" style="background:radial-gradient(circle,rgba(91,187,138,0.2) 0%,transparent 70%);filter:blur(80px);opacity:0.07;"></div>
+  <div class="absolute right-0 top-0 w-[500px] h-[500px] rounded-full pointer-events-none animate-float-alt" style="background:radial-gradient(circle,rgba(91,187,138,0.14) 0%,transparent 70%);opacity:0.45;"></div>
   <div class="max-w-4xl mx-auto relative z-10">
     <div class="reveal mb-14">
       <div class="accent-line"></div>
