@@ -58,3 +58,36 @@ img{display:block;max-width:100%}.brand-logo{width:62px;height:62px;object-fit:c
 @keyframes soft-fade{from{opacity:0}to{opacity:1}}
 .motion-fade{animation:soft-fade .55s ease-out both}
 @media(prefers-reduced-motion:reduce){.motion-fade{animation:soft-fade .55s ease-out both!important;transform:none!important}}
+/* Map and calendar display the live services instead of copied placeholders. */
+.map-panel{overflow:hidden;border:1px solid var(--line);background:var(--light)}
+.location-map{display:block;width:100%;height:360px;border:0}
+.map-caption{display:block;padding:18px 20px;font-size:14px;font-weight:600;background:#fff;border-top:1px solid var(--line)}
+.map-caption:hover{background:#eef8f2;color:#227452}
+.calendar-intro{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.calendar-update{font-size:13px;color:#227452;background:#e8f5ee;padding:9px 14px;margin:24px 0 0}
+.admissions-calendar{display:block;width:100%;height:920px;margin-top:24px;border:1px solid var(--line);background:var(--light)}
+@media(max-width:700px){.location-map{height:320px}.admissions-calendar{height:800px}.calendar-intro{gap:0}.calendar-update{margin-top:14px}.calendar-live .calendar-button{display:block;width:100%}}
+/* Entrances replay when a section returns to view. */
+@keyframes soft-enter{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.motion-enter{animation-duration:.8s}
+.header{transition:box-shadow .25s ease}
+.header.is-scrolled{box-shadow:0 6px 24px #2020230d}
+.header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--accent);transform:scaleX(var(--scroll-progress,0));transform-origin:left;pointer-events:none}
+.difference-grid>article,.teacher-card,.university-list>li,.video-grid>article,.admission-roadmap>li,.channel-grid>article,.resource-grid>article,.exam-map>article,.application-checks>article{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease}
+.teacher-card .portrait,.school-logo,.review-photo,.space-photo{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.text-link{transition:color .2s ease,text-decoration-color .2s ease}
+.text-link:hover,.text-link:focus-visible{color:#227452;text-decoration-color:var(--ink)}
+@media(hover:hover) and (pointer:fine){
+ .difference-grid>article:hover,.teacher-card:hover,.university-list>li:hover,.video-grid>article:hover,.admission-roadmap>li:hover,.channel-grid>article:hover,.resource-grid>article:hover,.exam-map>article:hover,.application-checks>article:hover{transform:translateY(-6px);border-color:#39966b;box-shadow:0 14px 28px #2020230d}
+ .university-list>li:hover{background:#eaf5ef}
+ .teacher-card:hover .portrait{transform:scale(1.025)}
+ .university-list>li:hover .school-logo{transform:scale(1.08)}
+ .review-photo-link:hover .review-photo,.space-grid a:hover img{transform:scale(1.035)}
+ .button:hover,.nav-consult:hover{transform:translateY(-3px);box-shadow:0 8px 18px #20202318}
+ .button.outline:hover{background:var(--ink);color:white;border-color:var(--ink)}
+}
+.button:active,.nav-consult:active{transform:scale(.98)}
+@media(prefers-reduced-motion:reduce){
+ .motion-fade{animation-duration:.16s!important}
+ .difference-grid>article,.teacher-card,.university-list>li,.video-grid>article,.admission-roadmap>li,.channel-grid>article,.resource-grid>article,.exam-map>article,.application-checks>article,.teacher-card .portrait,.school-logo,.review-photo,.space-grid a img,.button,.nav-consult{transform:none!important}
+}
