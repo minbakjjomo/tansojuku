@@ -2,7 +2,8 @@
   const container = document.getElementById('naver-location-map');
   if (!container) return;
 
-  const showFallback = () => {
+  const showFallback = reason => {
+    container.dataset.mapStatus = reason;
     const link = document.createElement('a');
     link.className = 'map-fallback';
     link.href = 'https://map.naver.com/p/entry/place/1231105818';
@@ -11,9 +12,9 @@
     link.textContent = '네이버지도에서 학원 위치 확인 ↗';
     container.replaceChildren(link);
   };
-  window.navermap_authFailure = showFallback;
+  window.navermap_authFailure = () => showFallback('authentication');
   window.initTansojukuMap = () => {
-    if (!window.naver?.maps) return showFallback();
+    if (!window.naver?.maps) return showFallback('sdk-unavailable');
     container.replaceChildren();
     const position = new naver.maps.LatLng(37.5209444, 127.0236616);
     const map = new naver.maps.Map(container, {
@@ -25,12 +26,13 @@
       borderColor: '#5BBB8A'
     });
     label.open(map, marker);
+    container.dataset.mapStatus = 'ready';
   };
   const loadMap = () => {
     const script = document.createElement('script');
     script.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=2lcyqttm2c&callback=initTansojukuMap';
     script.async = true;
-    script.onerror = showFallback;
+    script.onerror = () => showFallback('network');
     document.head.appendChild(script);
   };
   if (!('IntersectionObserver' in window)) return loadMap();
