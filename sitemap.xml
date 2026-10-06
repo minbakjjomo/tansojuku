@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://tansojuku.com/</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url><loc>https://tansojuku.com/about.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/admissions-info.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/contact.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/interviews.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/program-basic.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/program-eju.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/program-exam-interview.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/program-general-subjects.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/program-jlpt.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/programs.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/results.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/reviews.html</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://tansojuku.com/space.html</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>
