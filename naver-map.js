@@ -30,8 +30,9 @@
   };
   const loadMap = () => {
     const script = document.createElement('script');
-    script.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=2lcyqttm2c&callback=initTansojukuMap';
+    script.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=2lcyqttm2c';
     script.async = true;
+    script.onload = window.initTansojukuMap;
     script.onerror = () => showFallback('network');
     document.head.appendChild(script);
   };
