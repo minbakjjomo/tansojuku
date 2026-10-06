@@ -113,3 +113,5 @@ img{display:block;max-width:100%}.brand-logo{width:62px;height:62px;object-fit:c
 
 .map-label{padding:12px 18px;text-align:center;font-size:13px;line-height:1.8;color:var(--ink)}
 .map-fallback{display:flex;align-items:center;justify-content:center;height:100%;padding:24px;text-align:center;text-decoration:underline;text-underline-offset:5px}
+
+.location-map{isolation:isolate}
