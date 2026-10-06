@@ -99,3 +99,14 @@ img{display:block;max-width:100%}.brand-logo{width:62px;height:62px;object-fit:c
 
 /* Center page and section titles; retain the alignment of descriptive content. */
 .section-heading>h2,.section-heading>.eyebrow,.page-intro>h1,.page-intro>.eyebrow,.consult-cta h2,.consult-cta .eyebrow{text-align:center}
+
+/* Alignment refinements requested for introductory copy and supporting links. */
+.centered-copy,.guide-heading,.other-schools>summary,.schedule-note,.guide-note{text-align:center}
+.centered-link{display:table;margin:0 auto;text-align:center}
+.slider-heading h3{flex:1;text-align:center}
+.video-grid>article{display:flex;flex-direction:column}
+.video-grid .interview-video{flex-shrink:0}
+.video-grid .interview-link{align-self:center;margin-top:auto}
+.schedule-note{line-height:2;margin-top:24px}
+.schedule-preview>.calendar-button{display:table;width:fit-content;max-width:100%;margin:25px auto 0}
+.guide-note{line-height:2.2;margin-top:32px;margin-bottom:20px}
