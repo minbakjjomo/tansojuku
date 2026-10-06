@@ -9,7 +9,7 @@
     link.href = 'https://map.naver.com/p/entry/place/1231105818';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = '네이버지도에서 학원 위치 확인 ↗';
+    link.textContent = '네이버지도에서 탄소쥬크 위치 확인 ↗';
     container.replaceChildren(link);
   };
   window.navermap_authFailure = () => showFallback('authentication');
