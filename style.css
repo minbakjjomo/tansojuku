@@ -215,3 +215,7 @@ img{display:block;max-width:100%}.brand-logo{width:62px;height:62px;object-fit:c
  .program-example-detail>summary{font-size:16px;line-height:2.2;padding-top:24px;padding-bottom:24px}
  .program-before-after>div{padding:20px}
 }
+
+/* Text-only instructor card when no portrait file is available. */
+.teacher-grid.three .teacher-card.teacher-card-text{display:block;grid-template-columns:minmax(0,1fr);gap:0}
+.teacher-card.teacher-card-text .teacher-copy{width:100%;min-width:0}
