@@ -4,7 +4,7 @@
 <meta content="#5BBB8A" name="theme-color"/><title>일본 입시·일본어 1:1 맞춤 수업 | 탄소쥬크</title>
 <meta content="신사동 가로수길 탄소쥬크의 일본어 1:1 맞춤 수업. EJU·JLPT·지망이유서·본고사·면접 준비부터 일본대학 합격 후기와 입시 일정까지 확인하세요." name="description"/>
 <link href="/favicon.jpg" rel="icon" type="image/jpeg"/>
-<link href="style.css?v=22" rel="stylesheet"/><script defer="" src="site.js?v=13"></script><link href="https://tansojuku.com/" rel="canonical"/>
+<link href="style.css?v=22" rel="stylesheet"/><script defer="" src="site.js?v=14"></script><link href="https://tansojuku.com/" rel="canonical"/>
 <meta content="일본 입시·일본어 1:1 맞춤 수업 | 탄소쥬크" property="og:title"/>
 <meta content="신사동 가로수길 탄소쥬크의 일본어 1:1 맞춤 수업. EJU·JLPT·지망이유서·본고사·면접 준비부터 일본대학 합격 후기와 입시 일정까지 확인하세요." property="og:description"/>
 <meta content="website" property="og:type"/>
@@ -19,15 +19,26 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="https://tansojuku.com/assets/og-tansojuku.png" name="twitter:image"/>
 <meta content="탄소쥬크 로고" name="twitter:image:alt"/>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1BBEBGEN2H"></script>
+
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1BBEBGEN2H');
-  </script>
+window.addEventListener('load', () => {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', 'G-1BBEBGEN2H');
+
+  const googleTag = document.createElement('script');
+  googleTag.async = true;
+  googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-1BBEBGEN2H';
+  document.body.appendChild(googleTag);
+
+  const analytics = document.createElement('script');
+  analytics.src = 'analytics.js?v=1';
+  document.body.appendChild(analytics);
+}, {once: true});
+</script>
 <meta content="b481c7dae8cae500b0518b8b23e6ebb46bf6f611" name="naver-site-verification"/>
-<script defer="" src="analytics.js?v=1"></script>
+
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">

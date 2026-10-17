@@ -24,7 +24,7 @@ document.querySelectorAll('[data-slide]').forEach(button => {
     });
   }, {threshold: 0.08});
 
-  document.querySelectorAll('.hero-copy, .page-intro > *, .section-heading, .difference-grid > article, .teacher-card, .course-card, .university-list > li, .review-slide, .review-gallery > figure, .video-grid > article, .space-grid > figure, .admission-roadmap > li, .channel-grid > article, .resource-grid > article, .exam-map > article, .application-checks > article, .visual-route-step, .detail-row, .location-grid > *, .consult-cta > div').forEach(target => {
+  document.querySelectorAll('.section-heading, .difference-grid > article, .teacher-card, .course-card, .university-list > li, .review-slide, .review-gallery > figure, .video-grid > article, .space-grid > figure, .admission-roadmap > li, .channel-grid > article, .resource-grid > article, .exam-map > article, .application-checks > article, .visual-route-step, .detail-row, .location-grid > *, .consult-cta > div').forEach(target => {
     const index = Array.from(target.parentElement.children).indexOf(target);
     target.style.setProperty('--motion-delay', `${Math.min(index, 4) * 75}ms`);
     observer.observe(target);
