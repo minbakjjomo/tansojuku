@@ -53,3 +53,20 @@
  .page-sub .program-logo-strip span{font-size:12px;line-height:1.7}
  .page-sub .resource-icon{width:54px;height:54px;margin-bottom:22px}
 }
+
+.page-about .profile-career-grid,.page-about .profile-media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
+.page-about .profile-career-panel{min-width:0;padding:30px;border-radius:24px;background:var(--light)}
+.page-about .profile-career-panel h3{margin:0;font-size:22px;letter-spacing:-.7px}
+.page-about .profile-career-panel .profile-careers{margin:20px 0 0;padding-left:20px;font-size:15px;line-height:1.9;word-break:keep-all;overflow-wrap:anywhere}
+.page-about .profile-career-panel .profile-careers li{margin-bottom:10px}
+.page-about .profile-career-panel .profile-careers li:last-child{margin-bottom:0}
+.page-about .profile-media-title{margin:44px 0 0;font-size:24px;letter-spacing:-.7px}
+.page-about .profile-media-card{display:flex;min-width:0;flex-direction:column;overflow:hidden;border-radius:24px;background:var(--light);text-decoration:none}
+.page-about .profile-media-card:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.page-about .profile-media-image{aspect-ratio:16/9;background:var(--light);overflow:hidden}
+.page-about .profile-media-image img{display:block;width:100%;height:100%;object-fit:contain}
+.page-about .profile-media-copy{padding:26px}
+.page-about .profile-media-copy .eyebrow{margin:0 0 10px;font-size:13px;color:var(--muted)}
+.page-about .profile-media-copy h4{margin:0 0 24px;font-size:23px;line-height:1.5;letter-spacing:-.6px}
+.page-about .profile-media-copy .text-link{font-size:14px}
+@media(max-width:760px){.page-about .profile-career-grid,.page-about .profile-media-grid{grid-template-columns:1fr;gap:16px}.page-about .profile-career-panel{padding:26px}.page-about .profile-career-panel .profile-careers{font-size:14px}.page-about .profile-career-panel h3,.page-about .profile-media-copy h4{font-size:21px}.page-about .profile-media-copy{padding:24px}}
